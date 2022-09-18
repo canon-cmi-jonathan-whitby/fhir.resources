@@ -313,6 +313,10 @@ MODEL_CLASSES = {
     "HealthcareServiceNotAvailable": (None, ".healthcareservice"),
     "HumanName": (None, ".humanname"),
     "Identifier": (None, ".identifier"),
+    "ImagingSelection": (None, ".imagingselection"),
+    "ImagingSelectionImageRegion": (None, ".imagingselection"),
+    "ImagingSelectionInstance": (None, ".imagingselection"),
+    "ImagingSelectionInstanceImageRegion": (None, ".imagingselection"),
     "ImagingStudy": (None, ".imagingstudy"),
     "ImagingStudySeries": (None, ".imagingstudy"),
     "ImagingStudySeriesInstance": (None, ".imagingstudy"),
@@ -2558,6 +2562,22 @@ def humanname_validator(v: Union[StrBytes, dict, Path, FHIRAbstractModel]):
 def identifier_validator(v: Union[StrBytes, dict, Path, FHIRAbstractModel]):
 
     return fhir_model_validator("Identifier", v)
+
+
+def imagingselection_validator(v: Union[StrBytes, dict, Path, FHIRAbstractModel]):
+    return fhir_model_validator("ImagingSelection", v)
+
+
+def imagingselectioninstance_validator(v: Union[StrBytes, dict, Path, FHIRAbstractModel]):
+    return fhir_model_validator("ImagingSelectionInstance", v)
+
+
+def imagingselectioninstanceimageregion_validator(v: Union[StrBytes, dict, Path, FHIRAbstractModel]):
+    return fhir_model_validator("ImagingSelectionInstanceImageRegion", v)
+
+
+def imagingselectionimageregion_validator(v: Union[StrBytes, dict, Path, FHIRAbstractModel]):
+    return fhir_model_validator("ImagingSelectionImageRegion", v)
 
 
 def imagingstudy_validator(v: Union[StrBytes, dict, Path, FHIRAbstractModel]):
@@ -5178,6 +5198,10 @@ __all__ = [
     "healthcareservicenotavailable_validator",
     "humanname_validator",
     "identifier_validator",
+    "imagingselection_validator",
+    "imagingselectionimageregion_validator",
+    "imagingselectioninstance_validator",
+    "imagingselectioninstanceimageregion_validator",
     "imagingstudy_validator",
     "imagingstudyseries_validator",
     "imagingstudyseriesinstance_validator",

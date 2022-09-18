@@ -1863,6 +1863,22 @@ class IdentifierType(AbstractType):
     __resource_type__ = "Identifier"
 
 
+class ImagingSelectionType(AbstractType):
+    __resource_type__ = "ImagingSelection"
+
+
+class ImagingSelectionInstanceType(AbstractType):
+    __resource_type__ = "ImagingSelectionInstance"
+
+
+class ImagingSelectionInstanceImageRegionType(AbstractType):
+    __resource_type__ = "ImagingSelectionInstanceImageRegion"
+
+
+class ImagingSelectionImageRegionType(AbstractType):
+    __resource_type__ = "ImagingSelectionImageRegion"
+
+
 class ImagingStudyType(AbstractType):
     __resource_type__ = "ImagingStudy"
 
